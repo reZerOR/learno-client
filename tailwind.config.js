@@ -6,7 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      color : {
+      content: {
+        "dot": 'url("/src/assets/dot.svg")'
+      },
+      colors : {
         "backgroundprime": '#EFF0EA',
         "textPrime": '#1D2424',
         "prime": '#21857B',
