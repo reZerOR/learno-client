@@ -17,7 +17,6 @@ const Navbar = () => {
       transition: { duration: 0.5 },
     },
   };
-  console.log(visable);
   return (
     <Container>
       <nav className="flex items-center justify-between">
