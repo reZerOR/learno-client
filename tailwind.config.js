@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       content: {
-        "dot": 'url("/src/assets/dot.svg")'
+        "dot": 'url("/src/assets/dot.svg")',
+        "group": "url('/src/assets/Group.svg')"
       },
       colors : {
         "backgroundprime": '#EFF0EA',
