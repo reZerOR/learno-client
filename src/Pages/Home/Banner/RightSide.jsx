@@ -1,16 +1,19 @@
 import rect1 from "../../../assets/rect1.png";
+import rect2 from "../../../assets/rect2.png";
 import { motion } from "framer-motion";
 import profile1 from "../../../assets/profile1.png";
 import profile2 from "../../../assets/profile2.png";
 import profile3 from "../../../assets/profile3.png";
+import category from "../../../assets/Category.svg";
 
 const RightSide = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row gap-6">
       {/* left side of right side */}
       <div>
+        {/* img1 */}
         <div className="relative">
-          <img src={rect1} className="" alt="" />
+          <img src={rect2} className="" alt="" />
           <motion.div
             initial={{ clipPath: "inset(0% 10% 100% 90% round 10px)" }}
             animate={{ clipPath: "inset(0% 0% 0% 0% round 10px)" }}
@@ -18,6 +21,7 @@ const RightSide = () => {
             className="w-[235px] box-border h-[325px] absolute -top-2 left-4  rounded-xl border-[6px] border-prime"
           ></motion.div>
         </div>
+        {/* Real time feedback */}
         <div className="mt-6">
           <div className="bg-white rounded-lg inline-block px-4 py-[22px]">
             {/* profile with border */}
@@ -48,7 +52,29 @@ const RightSide = () => {
       </div>
       {/* right side of right side */}
       <div>
-        <div></div>
+        {/* categories rank */}
+        <div className="w-[244px] bg-white p-4 mb-6 rounded-lg">
+          <div className="flex justify-between mb-[18px]">
+            <p>Categories Rank</p>
+            <div className="w-5 h-5 flex items-center justify-center rounded bg-secondPrime">
+              <img src={category} alt="" />
+            </div>
+          </div>
+          {/* sticks */}
+          <div className="grid grid-cols-10 gap-3">
+            <div className="w-[10px] h-[52px] self-end bg-prime rounded-2xl"></div>
+            <div className="w-[10px] h-[39px] self-end bg-violet-500 rounded-2xl"></div>
+            <div className="w-[10px] h-[59px] self-end bg-rose-500 rounded-2xl"></div>
+            <div className="w-[10px] h-[45px] self-end bg-teal-400 rounded-2xl"></div>
+            <div className="w-[10px] h-[74px] self-end bg-green-800 rounded-2xl"></div>
+            <div className="w-[10px] h-[39px] self-end bg-red-200 rounded-2xl"></div>
+            <div className="w-[10px] h-[59px] self-end bg-violet-500 rounded-2xl"></div>
+            <div className="w-[10px] h-[52px] self-end bg-teal-400 rounded-2xl"></div>
+            <div className="w-[10px] h-[23px] self-end bg-prime rounded-2xl"></div>
+            <div className="w-[10px] h-[59px] self-end bg-violet-500 rounded-2xl"></div>
+          </div>
+        </div>
+        {/* img2 */}
         <div className="relative">
           <img src={rect1} className="" alt="" />
           <motion.div
@@ -62,5 +88,4 @@ const RightSide = () => {
     </div>
   );
 };
-
 export default RightSide;
